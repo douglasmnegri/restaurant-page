@@ -6,10 +6,23 @@ module.exports = {
   entry: {
     index: "./src/index.js",
   },
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: "asset/inline",
+      },
+    ],
+  },
+
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Output Management",
-      inject: "body",
+      template: "./src/index.html",
+      inject: false,
     }),
   ],
   output: {
