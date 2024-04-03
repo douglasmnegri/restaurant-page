@@ -76,14 +76,25 @@ header button:hover::after {
   margin: 1em;
   padding: 1em;
   border-radius: 8px;
+  border: solid black 2px;
 }
 
 .chef {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 .short-text {
-    margin-top: 1em;
-    padding: 2em;
-    background-color: white;
+  margin-top: 1em;
+  padding: 2em;
+  background-color: white;
+}
+
+.menu-items {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.menu-items img {
+  width: 350px;
+  height: 300px;
 }
