@@ -19,8 +19,19 @@ function home() {
   content.appendChild(chefImage);
   content.appendChild(textBlock);
 
+  // menu block 
+  const secondBlock = document.createElement("div");
+
+  const menuTitle = document.createElement("h1");
+  menuTitle.classList.add("menu-title");
+  menuTitle.textContent = "Menu";
+
   const menu = document.createElement("div");
   menu.classList.add("menu-items");
+
+  const finishBlock = document.createElement("div");
+  finishBlock.classList.add("finish-block");
+
   const menuItems = () => {
     for (let i = 0; i < images.length; i++) {
       const foodItem = document.createElement("div");
@@ -33,44 +44,28 @@ function home() {
       menu.appendChild(foodItem);
     }
   };
+  
   menuItems();
-  content.appendChild(menu);
+  secondBlock.appendChild(menuTitle);
+  secondBlock.appendChild(menu);
+  secondBlock.appendChild(finishBlock);
+  content.appendChild(secondBlock);
 
   const bologneseDescription = document.querySelector(".food-item0 > div");
   bologneseDescription.textContent =
-    "Classic bolognese sauce served with spaghetti";
+    "Savor the rich flavors of our hearty bolognese sauce, made with tender ground meat, aromatic herbs, and savory tomatoes, served over a bed of perfectly cooked spaghetti.";
 
   const carbonaraDescription = document.querySelector(".food-item1 > div");
-  carbonaraDescription.textContent = "Delicious carbonara with creamy sauce";
+  carbonaraDescription.textContent =
+    "Indulge in the velvety richness of our creamy carbonara pasta, featuring al dente spaghetti coated in a luscious sauce made with eggs, Parmesan cheese, and crispy bacon, creating a symphony of flavors with every bite.";
 
   const lasagnaDescription = document.querySelector(".food-item2 > div");
-  lasagnaDescription.textContent = "Great lasgna for all of us";
+  lasagnaDescription.textContent =
+    "Experience the ultimate comfort food with our classic lasagna, featuring layers of tender pasta sheets, flavorful meat sauce, creamy béchamel, and melted cheese, baked to golden perfection for a satisfying and wholesome meal.";
 
   const shrimpScampiDescription = document.querySelector(".food-item3 > div");
   shrimpScampiDescription.textContent =
-    "Succulent shrimp scampi cooked to perfection";
+    "Transport your taste buds to the shores of Italy with our garlic-infused shrimp scampi, featuring succulent shrimp sautéed in a fragrant blend of garlic, butter, and white wine, served over a bed of perfectly cooked pasta for a delightful culinary experience.";
 }
 
 export { home };
-
-// const menu = document.createElement("div");
-//   menu.classList.add("menu-items");
-
-//   const foodItem = document.createElement("div");
-//   const bolognese = document.createElement("img");
-//   const carbonara = document.createElement("img");
-//   const lasgna = document.createElement("img");
-//   const shrimpScampi = document.createElement("img");
-
-//   bolognese.src = images[0];
-//   carbonara.src = images[1]
-//   lasgna.src = images[2];
-//   shrimpScampi.src = images[3];
-
-//   foodItem.appendChild(bolognese);
-//   foodItem.appendChild(carbonara);
-//   foodItem.appendChild(lasgna);
-//   foodItem.appendChild(shrimpScampi);
-
-//   menu.appendChild(foodItem);
-//   content.appendChild(menu);
