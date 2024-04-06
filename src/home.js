@@ -57,7 +57,7 @@ function home() {
 
   const carbonaraDescription = document.querySelector(".food-item1 > div");
   carbonaraDescription.textContent =
-    "Indulge in the velvety richness of our creamy carbonara pasta, featuring al dente spaghetti coated in a luscious sauce made with eggs, Parmesan cheese, and crispy bacon, creating a symphony of flavors with every bite.";
+    "Indulge in the velvety richness of our creamy carbonara pasta, featuring al dente spaghetti coated in a luscious sauce made with eggs, Parmesan cheese, and crispy bacon.";
 
   const lasagnaDescription = document.querySelector(".food-item2 > div");
   lasagnaDescription.textContent =
