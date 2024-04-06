@@ -1,25 +1,39 @@
-import italianChefImage from "./images/italian-chef.png";
-import bolognesePlate from "./images/bolognese.jpg";
-import carbonaraPlate from "./images/carbonara.jpg";
-import lasagnaPlate from "./images/lasagna.jpg";
-import shrimpPlate from "./images/shrimp-scampi.jpg";
+import italianChefImage from "../images/italian-chef.png";
+import bolognesePlate from "../images/bolognese.jpg";
+import carbonaraPlate from "../images/carbonara.jpg";
+import lasagnaPlate from "../images/lasagna.jpg";
+import shrimpPlate from "../images/shrimp-scampi.jpg";
+import familyPicture from "../images/family-restaurant.jpg";
 
 const images = [bolognesePlate, carbonaraPlate, lasagnaPlate, shrimpPlate];
 
 function home() {
   const content = document.querySelector("#content");
-  const textBlock = document.createElement("div");
-  textBlock.classList.add("short-text");
-  textBlock.innerHTML =
-    "Discover the essence of Italian tradition at Cordiali's Osteria. <br><br>Our handcrafted pastas and mouthwatering antipasti are crafted with love and care, inviting you to savor the flavors of Italy with every bite. Located in the heart of Florianópolis, our cozy atmosphere and attentive service promise an unforgettable dining experience. Join us and indulge in the finest Italian hospitality at Cordiali's Osteria. <br><br>Buon appetito!";
+  const textBlockChef = document.createElement("div");
+  const textBlockFamily = document.createElement("div");
 
   const chefImage = document.createElement("img");
   chefImage.classList.add("chef");
   chefImage.src = italianChefImage;
-  content.appendChild(chefImage);
-  content.appendChild(textBlock);
 
-  // menu block 
+  textBlockChef.classList.add("short-text");
+  textBlockChef.innerHTML =
+    "Discover the essence of Italian tradition at Cordiali's Osteria. <br><br>Our handcrafted pastas and mouthwatering antipasti are crafted with love and care, inviting you to savor the flavors of Italy with every bite. Located in the heart of New York, our cozy atmosphere and attentive service promise an unforgettable dining experience. Join us and indulge in the finest Italian hospitality at Cordiali's Osteria. <br><br>Buon appetito!";
+
+  const familyPhoto = document.createElement("img");
+  familyPhoto.classList.add("family-pic");
+  familyPhoto.src = familyPicture;
+
+  textBlockFamily.classList.add("short-text");
+  textBlockFamily.innerHTML =
+    "Cordiali's Osteria, an iconic Italian eatery in the heart of vibrant New York City, has delighted patrons for over 70 years. <br><br>With a name that exudes warmth and camaraderie, our osteria invites guests to indulge in the authentic flavors of Italy amidst rustic charm and hospitality. <br><br>From our cherished family recipes to our carefully curated wine selection, Cordiali's Osteria offers a dining experience that honors the rich tradition of Italian cuisine.";
+
+  content.appendChild(chefImage);
+  content.appendChild(textBlockChef);
+  content.appendChild(familyPhoto);
+  content.appendChild(textBlockFamily);
+
+  // menu block
   const secondBlock = document.createElement("div");
 
   const menuTitle = document.createElement("h1");
@@ -44,7 +58,7 @@ function home() {
       menu.appendChild(foodItem);
     }
   };
-  
+
   menuItems();
   secondBlock.appendChild(menuTitle);
   secondBlock.appendChild(menu);

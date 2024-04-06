@@ -14,7 +14,6 @@ li {
 }
 
 body {
-  background-color: #000000;
   font-family: var(--main-font);
 }
 
@@ -22,7 +21,7 @@ body {
   display: grid;
   grid-template-rows: 0.5fr 6fr;
   grid-template-columns: 0.5fr 1fr 0.5fr;
-  background-color: #000000;
+  background-color: #FCFBF7;
 }
 
 header {
@@ -30,7 +29,7 @@ header {
   grid-column: 1 / 4;
   padding: 20px;
   text-align: center;
-  background-color: #fff;
+  background-color: white;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -48,6 +47,7 @@ header button {
   cursor: pointer;
   transition: transform 0.2s ease;
   appearance: none;
+  background-color: #7BA573;
 }
 
 header button::after {
@@ -80,8 +80,14 @@ header button:hover::after {
   background-color: rgb(238, 238, 238);
 }
 
-.chef {
-  max-width: 100%;
+.chef,
+.family-pic {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+  margin-top: 1em;
+  border: solid white 4px;
 }
 
 .short-text {
@@ -157,7 +163,7 @@ textarea {
 }
 #content button {
   padding: 10px 20px;
-  background-color: wheat;
+  background-color: #7BA573;
   display: inline-block;
   padding: 10px 20px;
   position: relative;
